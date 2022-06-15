@@ -1,0 +1,269 @@
+.brandImage{
+    width: 40px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.textarea{
+    background: rgb(43, 39, 39);
+    border-radius: 20px;
+    border:none;
+    height: 45px;
+    color: white;
+}
+
+.textarea::placeholder{
+    color: white;
+    
+}
+
+.Box{
+    border-bottom: 5px solid white;
+    width: 100px;
+    margin-left: 30px;
+    position: relative;
+    top: 7px;
+    border-radius: 5px;
+    /* position: relative;
+    left: 30px; */
+}
+.Box:hover{
+    border-color: turquoise;
+    color: turquoise;
+    cursor: pointer;
+}
+.icon{
+    font-size: 35px;
+    margin-left: 25px;
+
+}
+
+.icon:hover{
+    color: turquoise;
+    cursor: pointer;
+}
+
+
+
+.list{
+    list-style-type: none;
+   font-weight: 500;
+    font-size: 17px;
+}
+
+.Container{
+    background: rgb(36, 35, 35);
+    height: 100%;
+}
+
+.anchor{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-icon{
+    font-size: 25px;
+    color: lightgreen;
+}
+
+.anchor:hover{
+    background: rgb(145, 141, 141);
+    height: 60px;
+    padding: 15px;
+    padding-right: 100px;
+   
+    border-radius: 10px;
+}
+
+.Anch:hover{
+    background: rgb(145, 141, 141);
+    height: 60px;
+    padding: 15px;
+    padding-right: 140px;
+   
+    border-radius: 10px;
+}
+
+
+.Anch{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* .Card2{
+    border-radius: 10px;
+    background-image: url("src/assets/IMG2.jpg");
+} */
+
+
+
+
+#card1{
+    background-image: url("src/assets/wallbook.jpg");
+    border-radius: 10px;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#card2{
+    background-image: url("src/assets/IMG2.jpg");
+    border-radius: 10px;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#card3{
+    background-image: url("src/assets/IMG2.jpg");
+    border-radius: 10px;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#card4{
+    background-image: url("src/assets/IMG3.jpg");
+    border-radius: 10px;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#card5{
+    background-image: url("src/assets/IMG4.jpg");
+    border-radius: 10px;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+#card6{
+    background-image: url("src/assets/IMG5.jpg");
+    border-radius: 10px;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.Card:hover{
+    color: green;
+    opacity: 0.5;
+    /* background: lightseagreen; */
+    /* color: lightgreen; */
+}
+
+.heading-text{
+    margin-top: 130px;
+    margin-left: 10px;
+}
+
+
+.field{
+    background: rgb(43, 39, 39);
+    border-radius: 20px;
+    border:none;
+    height: 40px;
+    color: white;
+    width: 600px;
+}
+.field::placeholder{
+    color: white;
+    /* margin-left: 30px; */
+    font-size: 16px;
+    position: relative;
+    left: 15px;
+}
+
+.user-card{
+  border-radius: 10px;
+}
+
+
+.brand-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-icon1{
+    color: red;
+}
+
+.user-icon2{
+    color: green;
+}
+
+.user-icon3{
+    color: yellow;
+}
+
+.user-a{
+    /* margin-bottom: 40px; */
+    position: relative;
+    bottom: 10px;
+    text-decoration: none;
+    color: lightgray;
+}
+
+.user-a:hover{
+    background: rgb(145, 141, 141);
+    height: 60px;
+    /* padding: 15px;
+    padding-right: 100px; */
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    border-radius: 10px;
+}
+
+.createRoomBox{
+    height: 40px;
+    width: 170px;
+    border-radius: 20px;
+    border: 1px solid rgb(101, 101, 243);
+    color: turquoise;
+    position: relative;
+    bottom: 10px;
+}
+
+.createRoomBox:hover{
+  background: rgb(194, 177, 158);
+}
+
+.createRoomBox i{
+    color: brown;
+}
+
+.room-icon{
+    font-size: 25px;
+    /* background: rgb(188, 206, 207); */
+   border-radius: 50%;
+}
+
+.img-icon{
+    font-size: 30px;
+}
+
+
+.box1{
+    width: 100px;
+    height: 100px;
+    border-bottom: 1px solid turquoise;
+  
+}

@@ -1,0 +1,246 @@
+<div class="container-fluid fixed-top">
+  
+  <div class="center-box">
+    <div class="row">
+      <div class="col-6">
+        <div class="col-heading">
+          <h1 class="ml-5 mt-5 main-heading text-primary">wallbook</h1>
+          <h2 class="ml-5 TEXT">
+            Wallbook helps you connect and share with the people in your life
+          </h2>
+        </div>
+      </div>
+      <div class="col-6">
+        <form [formGroup]="loginForm" novalidate>
+          <div class="card mt-5 shadow CARD" style="width: 25rem">
+            <div class="card-body">
+              <div class="form-row">
+                <div class="col-md-12">
+                  <input
+                    type="text"
+                    formControlName="Email"
+                    [ngClass]="{ 'is-invalid': submitted && h.Email.errors }"
+                    class="form-control input1 textarea"
+                    placeholder="Email address or phone number"
+                  />
+                  <div
+                    *ngIf="h.Email.touched && h.Email.errors"
+                    class="text-danger"
+                  >
+                    <div *ngIf="h.Email.errors.required">Email is required</div>
+                    <div *ngIf="h.Email.errors.email">
+                      Email must be valid a email
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <input
+                    type="password"
+                    formControlName="Password"
+                    [ngClass]="{ 'is-invalid': submitted && h.Password.errors }"
+                    class="form-control input2 textarea"
+                    placeholder="Password"
+                  />
+                  <div
+                    *ngIf="h.Password.touched && h.Password.errors"
+                    class="text-danger"
+                  >
+                    <div *ngIf="h.Password.errors.required">
+                      Password is required
+                    </div>
+                    <div *ngIf="h.Password.errors.minlength">
+                      Password must be 6 characters long
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center mt-3">
+                <button
+                  (click)="onLogin()"
+                  class="btn btn-primary btn-lg btn-block"
+                >
+                  Log in
+                </button>
+              </div>
+              <div class="text-center mt-2">
+                <a routerLink="/forgetpassword">Forget password?</a>
+              </div>
+              <hr />
+              <div class="text-center">
+                <button
+                  (click)="open(content)"
+                  class="btn btn-success BTN btn-lg"
+                >
+                  Create New Account
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coding for PopUp-Modal for Sign-Up -->
+  <!-- Now we will create a Popup-Modal for signup Form -->
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Sign Up</h4>
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="d('Cross click')"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="signupForm">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstname">First Name</label>
+            <input type="text" formControlName="firstName" [ngClass]="{'is-invalid':isSubmitted && s.firstName.errors}" class="form-control" />
+            <div
+                    *ngIf="isSubmitted && s.firstName.errors"
+                    class="text-danger"
+                  >
+                    <div *ngIf="s.firstName.errors.required">FirstName is required</div>
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lastname">Last Name</label>
+            <input type="text" formControlName="lastName" [ngClass]="{'is-invalid':isSubmitted && s.lastName.errors}" class="form-control"/>
+            <div
+            *ngIf="isSubmitted && s.lastName.errors"
+            class="text-danger"
+          >
+            <div *ngIf="s.lastName.errors.required">LastName is required</div>
+    </div>
+          </div>
+        </div>
+        <!-- For Phone Number -->
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" ng-keypress="filterValue($event)" formControlName="phone" [ngClass]="{'is-invalid':isSubmitted && s.phone.errors}" class="form-control" />
+          <div
+                    *ngIf="s.phone.touched && s.phone.errors"
+                    class="text-danger"
+                  >
+                    <div *ngIf="s.phone.errors.required">Phone Number  is required</div>
+                    <div *ngIf="s.phone.errors.minlength">
+                    Your phone number should be of 10 digits
+                    </div>
+                  </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" formControlName="email" [ngClass]="{'is-invalid':isSubmitted && s.email.errors}" class="form-control"/>
+          <div
+                    *ngIf="s.email.touched && s.email.errors"
+                    class="text-danger"
+                  >
+                    <div *ngIf="s.email.errors.required">Email is required</div>
+                    <div *ngIf="s.email.errors.email">
+                      Email must be valid a email
+                    </div>
+                  </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" [ngClass]="{'is-invalid':isSubmitted && s.password.errors}" class="form-control" />
+          <div
+                    *ngIf="s.password.touched && s.password.errors"
+                    class="text-danger"
+                  >
+                    <div *ngIf="s.password.errors.required">Password is required</div>
+                    <div *ngIf="s.password.errors.minlength">
+                    We suggest you to type a strong password and should be 8 characters long
+                    </div>
+                  </div>
+        </div>
+        <span>Date of Birth?</span>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <select class="form-control">
+              <option selected>Date</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <select class="form-control">
+              <option selected>Months</option>
+              <option>Jan</option>
+              <option>Feb</option>
+              <option>Mar</option>
+              <option>Apr</option>
+              <option>May</option>
+              <option>Jun</option>
+              <option>Jul</option>
+              <option>Aug</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <select class="form-control">
+              <option selected>Year</option>
+              <option>2022</option>
+              <option>2021</option>
+              <option>2020</option>
+              <option>2019</option>
+              <option>2018</option>
+              <option>2017</option>
+              <option>2016</option>
+              <option>2015</option>
+            </select>
+          </div>
+        </div>
+        <span>Gender?</span>
+        <div class="form-row">
+          <div class="form-group col-4">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" />
+              <label class="form-check-label" for="female"> Female </label>
+            </div>
+          </div>
+          <div class="form-group col-4">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" />
+              <label class="form-check-label" for="male"> Male </label>
+            </div>
+          </div>
+          <div class="form-group col-4">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" />
+              <label class="form-check-label" for="other"> Other </label>
+            </div>
+          </div>
+        </div>
+      </form>
+      <span class="small-text"
+        >By clicking SignUp, you agree to our Terms, Data Policy and Cookie
+        Policy. You may recieve SMS notifications from us and can opt at any
+        time.</span
+      >
+    </div>
+    <div class="modal-footer text-center">
+      <button (click)="onSignup(d('Cross click'))" type="submit" class="btn btn-success">Sign in</button>
+
+      <!-- <button
+        type="button"
+        class="btn btn-outline-dark"
+        (click)="('Save click')"
+      >
+        Save
+      </button> -->
+    </div>
+  </ng-template>
+</div>
+

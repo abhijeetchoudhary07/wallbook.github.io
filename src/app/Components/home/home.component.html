@@ -1,0 +1,274 @@
+<div class="container-fluid Container p-0">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <img
+      src="./../../../assets/wallbook.jpg"
+      class="navbar-brand img-fluid brandImage"
+      alt="brand image"
+    />
+    <h2 class="navbar-brand text-primary" style="font-size: 25px">Wallbook</h2>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <form class="form-inline ml-2">
+      <!-- <label class="sr-only" for="inlineFormInputGroupUsername2">Search Wallbook</label> -->
+      <div class="input-group mb-2 mr-sm-2">
+        <input
+          type="text"
+          class="form-control textarea"
+          placeholder="Search Wallbook"
+        />
+      </div>
+    </form>
+    <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <div class="Box">
+            <a class="nav-link text-white"> <i class="fa fa-home icon"></i> </a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <div class="Box ml-5">
+            <a class="nav-link text-white" [routerLink]="['/friends','Rohit']"><i class="fa fa-users icon"></i></a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="Box ml-5">
+            <a class="nav-link text-white"
+              ><i class="fa fa-hacker-news icon"></i
+            ></a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="ml-auto">
+        <button (click)="onloggingOut()" class="btn btn-danger">Logout</button>
+      </div>
+    </div>
+  </nav>
+  <!-- Background User Interface  -->
+  <div class="row">
+    <div class="col-3">
+      <ul class="" style="margin-top: 90px">
+        <li class="mt-4 list">
+          <a class="anchor" href="">
+            <img
+              src="./../../../assets/wallbook.jpg"
+              class="navbar-brand img-fluid brandImage"
+              alt="brand image"
+            />
+            Wallbook</a
+          >
+        </li>
+        <li class="mt-4 list">
+          <a href="" class="anchor">
+            <i class="fa fa-users ml-1 mr-4 nav-icon"></i>Find Friends
+          </a>
+        </li>
+        <li class="mt-4 list">
+          <a class="anchor" href=""
+            ><i class="fa fa-map ml-1 mr-4 nav-icon"></i> Market Place</a
+          >
+        </li>
+        <li class="mt-4 list">
+          <a class="Anch" href=""
+            ><i class="fa fa-users ml-1 mr-4 nav-icon"></i>Groups</a
+          >
+        </li>
+        <li class="mt-4 list">
+          <a class="Anch" href=""
+            ><i class="fa fa-youtube ml-1 mr-4 nav-icon"></i> Watch</a
+          >
+        </li>
+        <li class="mt-4 list">
+          <a class="anchor" href=""
+            ><i class="fa fa-map ml-1 mr-4 nav-icon"></i> Memories</a
+          >
+        </li>
+        <li class="mt-4 list">
+          <a class="Anch" href=""
+            ><i class="fa fa-bookmark ml-1 mr-4 nav-icon"></i> Saved</a
+          >
+        </li>
+        <li class="mt-4 list">
+          <a class="Anch" href=""
+            ><i class="fa fa-map ml-1 mr-4 nav-icon"></i>Pages</a
+          >
+        </li>
+        <li class="mt-4 list">
+          <a class="Anch" href=""
+            ><i class="fa fa-map ml-1 mr-4 nav-icon"></i>Events</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-6">
+      <div class="d-flex" style="margin-top: 52px">
+        <div
+          class="card ml-2 mt-5 Card"
+          id="card1"
+          style="width: 7rem; height: 200px"
+        >
+          <div class="card-body">
+            <h6 class="heading-text">Create Story</h6>
+          </div>
+        </div>
+
+        <div
+          class="card ml-2 mt-5 Card"
+          id="card2"
+          style="width: 7rem; height: 200px"
+        >
+          <div class="card-body">
+            <h6 class="heading-text">Story 1</h6>
+          </div>
+        </div>
+
+        <div
+          class="card ml-2 mt-5 Card"
+          id="card3"
+          style="width: 7rem; height: 200px"
+        >
+          <div class="card-body">
+            <h6 class="heading-text">Story 2</h6>
+          </div>
+        </div>
+
+        <div
+          class="card ml-2 mt-5 Card"
+          id="card4"
+          style="width: 7rem; height: 200px"
+        >
+          <div class="card-body">
+            <h6 class="heading-text">Story 3</h6>
+          </div>
+        </div>
+
+        <div
+          class="card ml-2 mt-5 Card"
+          id="card5"
+          style="width: 7rem; height: 200px"
+        >
+          <div class="card-body">
+            <h6 class="heading-text">Story 4</h6>
+          </div>
+        </div>
+
+        <div
+          class="card ml-2 mt-5 Card"
+          id="card6"
+          style="width: 7rem; height: 200px"
+        >
+          <div class="card-body">
+            <h6 class="heading-text">Story 5</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mt-4 user-card bg-dark">
+          <div class="card-title mt-4">
+            <img
+              src="./../../../assets/wallbook.jpg"
+              class="img-fluid brand-img ml-2"
+              alt="image"
+            />
+            <input
+              type="text"
+              class="field ml-2"
+              placeholder="What's on your mind, User ?"
+            />
+            <hr />
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <a href="#" class="ml-5 user-a"
+                ><i class="fa fa-map user-icon1"></i> Live Video</a
+              >
+            </div>
+            <div class="col-4">
+              <a href="#" class="ml-3 user-a"
+                ><i class="fa fa-users user-icon2"></i> Photo/Video</a
+              >
+            </div>
+            <div class="col-4">
+              <a href="#" class="user-a"
+                ><i class="fa fa-map user-icon3"></i> Feeling Activity</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mt-3 user-card bg-dark" style="height: 60px">
+          <div class="card-body d-flex justify-content-between">
+            <div class="createRoomBox">
+              <i class="fa fa-map ml-4 mt-2"></i>
+              Create Room
+            </div>
+            <i class="fa fa-chevron-right room-icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mt-3 user-card" *ngFor="let details of imagedetails">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-9">
+                <div class="d-flex">
+                  <img
+                    src="{{ details.user }}"
+                    class="img-fluid brand-img"
+                    alt="Image"
+                  />
+                  <div class="card-title text-muted ml-2">
+                    {{ details.name }} <br />
+                    <small>1d .<i class="fa fa-globe"></i></small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 text-muted">
+                <div class="float-right">
+                  <i class="fa fa-ellipsis-h img-icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src=" {{ details.image }}" class="img-fluid" alt="Image" />
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-between">
+              <div>
+                <i class="fa fa-thumbs-up text-muted"></i>
+                <i class="fa fa-heart text-muted"></i>
+                <span class="text-muted">22K</span>
+              </div>
+              <div class="text-muted">136 Comments 179 Shares</div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-4 text-muted text-center">
+                <i class="fa fa-thumbs-up text-muted"></i>Like
+              </div>
+              <div class="col-4 text-muted text-center">
+                <i class="fa fa-comment"></i>Comment
+              </div>
+              <div class="col-4 text-muted text-center">
+                <i class="fa fa-share"></i>Share
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
